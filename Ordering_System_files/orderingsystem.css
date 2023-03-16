@@ -1,0 +1,480 @@
+﻿body {
+    color: #4a4a4a;
+}
+
+#vueOrderingSystem {
+    font-size: 14px;
+}
+
+.no-border-bottom {
+     border-bottom: none;
+}
+
+[v-cloak] {
+    display: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Heebo;
+}
+
+
+
+.form-label-small {
+    font-size: 10px;
+}
+
+#content-section a {
+
+    color: #237ED6;
+    cursor: pointer;
+}
+
+.append {
+    position: sticky;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: white;
+    border: none;
+    border-top: 1px solid #fff;
+}
+
+.dd-apply-button {
+    color: #fff !important;
+    text-decoration: none !important;
+    text-align: left !important;
+    margin-bottom: 0;
+}
+
+
+#campaigns .vs__dropdown-menu {
+    padding-bottom: 0;
+}
+
+.accordion-button:focus {
+    border-color: #dbe0e7;
+}
+
+.circular-check {
+    background-color: #e3fff0;
+    border: 3px solid #e3fff0;
+    border-radius: 50%;
+    color: #00ba88;
+    display: block;
+    height: 28px;
+    line-height: 19px;
+    width: 28px;
+    padding-top: 0.1rem;
+    padding-left: 0.1rem;
+}
+
+.balance-box {
+    /*background-color: #f9fcff;*/
+    border: 1px solid #dbe0e7;
+    border-radius: 5px;
+    width: 300px;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #2d3e50;
+    background-color: #fff;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.card-title {
+    color: #2b2c50;
+    font-family: Heebo;
+}
+
+.card-text-balance {
+    font-size: 18px;
+    font-weight: 800;
+    color: #d50000;
+}
+
+.card-selected {
+    border-color: #d54c2a4f;
+    border-width: 3px;
+}
+
+.credit-card-selected {
+    border: #ff7a59 1px solid;
+    border-radius: 5px;
+}
+
+.credit-card-not-selected {
+    border: #dbe0e7 1px solid;
+    border-radius: 5px;
+}
+
+.payment-img {
+    background-color: #dbe0e7;
+    border: solid 1px #dbe0e7;
+    color: #8c8ca1;
+}
+
+hr {
+    color: #dbe0e7;
+    opacity: 0.5;
+}
+
+.logoInvoice {
+    /*border: 1px solid #4a4a4a;*/
+/*    margin-top: -0.5rem;*/
+    /*height: 65px;*/
+    border-radius: 3px;
+}
+
+.orderItemId {
+    color: #2d3e50;
+    font-size: 12px;
+}
+
+.circular-cart {
+    border-radius: 50px;
+    height: 42px;
+    width: 42px;
+    background-color: #dbe0e7;
+    border: solid 1px #dbe0e7;
+    border-radius: 50%;
+    color: #333;
+    display: block;
+    height: 38px;
+    line-height: 29px;
+    width: 38px;
+    padding-top: 4px;
+    display: inline-block;
+}
+
+    .circular-cart:hover {
+        background-color: #ff7a59;
+        border: solid 1px #ff7a59;
+        color: #fff;
+    }
+
+
+.circular-cart-blue {
+    border-radius: 50px;
+    height: 42px;
+    width: 42px;
+    background-color: #ff7a59;
+    border: solid 1px #ff7a59;
+    border-radius: 50%;
+    color: #fff;
+    display: block;
+    height: 38px;
+    line-height: 29px;
+    width: 38px;
+    padding-top: 5px;
+    display: inline-block;
+}
+
+    .circular-cart-blue:hover {
+        background-color: #dbe0e7;
+        color: #333;
+    }
+
+.border-dashed {
+    border-style: dashed !important;
+}
+
+.td-orderType {
+    background-color: #f3f5f7 !important;
+    width: 250px;
+    color: #4a4a4a;
+    /*border-top-left-radius: 4px;*/
+    border-top-right-radius: 4px;
+}
+
+/*Table*/
+#tableOrders .tbody-orders-oneTimeOrder {
+   /* height: 470px;*/
+    overflow-y: scroll;
+}
+
+#tableOrders .tbody-orders-monthlyCampaign {
+  /*  height: 378px;*/
+    overflow-y: scroll;
+}
+
+#tableOrders .tbody-orders-backlinks {
+  /*  height: 510px;*/
+    overflow-y: scroll;
+}
+
+#tableOrders .tbody-orders-keywordresearch {
+   /* height: 230px;*/
+    overflow-y: scroll;
+}
+
+#tableOrders > tbody > tr:last-child {
+    height: 100%;
+}
+
+.no-bottom-border {
+    border-bottom: none;
+}
+
+.table > :not(:last-child) > :last-child > * {
+    border-bottom-color: #dbe0e7;
+}
+
+tbody, td, tfoot, th, thead, tr {
+    border-bottom-color: #f5f5f5;
+    color: #4a4a4a;
+}
+
+.row-total {
+    background-color: #f3f5f7;
+}
+
+.box-item {
+    text-decoration: none !important;
+    color: #4a4a4a !important;
+}
+
+.box-item-remove {
+    color: #dc3545 !important;
+    margin-right: 10px;
+}
+
+/* End Table*/
+
+.payment-success-header {
+    width: 100%;
+    background-color: #00ba88;
+    color: #fff;
+    font-size: 28px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.payment-success-body {
+    width: 100%;
+    background-color: #fff;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    box-shadow: 0 6px 12px 0 rgba(21, 95, 137, 0.08);
+}
+
+.order-link-sucess {
+    color: #6c757d !important;
+}
+
+    .order-link-sucess:hover {
+        color: #fff !important;
+        text-decoration: underline !important;
+    }
+
+.accordion-item {
+    border-radius: 8px;
+    box-shadow: 0 6px 12px 0 rgba(21, 95, 137, 0.08);
+    border: solid 0.8px #dbe0e7;
+}
+
+/*#footerOrderDetails {
+    position: fixed;
+    background-color: #fff;
+    bottom: 0;
+    width: 99%;
+    box-shadow: 0 0 15px #333;
+}*/
+
+
+.toast {
+    opacity: 1 !important;
+}
+
+.search-customer a {
+    color: inherit !important;
+}
+
+.trial-promotion {
+    background-color: rgb(190, 56, 54) !important;
+    color: #fff;
+   /* font-weight: bold;*/
+    border-radius: 5px;
+}
+
+
+
+.trial-total-strike {
+    text-decoration: line-through;
+}
+/*
+.fa-check:before {
+    margin-left: 3px;
+}
+*/
+
+.custom-dropdown-input {
+    padding: 0.175rem 0.55rem !important;
+}
+
+.custom-dropdown-button {
+    padding: 0.175rem 0.35rem !important;
+    width: auto;
+    height:30px;
+    border-radius: 5px
+}
+
+.custom-td-type-all-orders-preview {
+    width: 16% !important;
+    min-width: 300px;
+}
+
+.form-check-input {
+    width: 1.3em !important;
+    height: 1.25em !important;
+}
+
+.balance-promotion-fields {
+    max-width: 115px;
+    display: inline;
+}
+
+.dropdown-toggle::after {
+    content: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M64 384C81.67 384 96 398.3 96 416C96 433.7 81.67 448 64 448C46.33 448 32 433.7 32 416C32 398.3 46.33 384 64 384zM64 224C81.67 224 96 238.3 96 256C96 273.7 81.67 288 64 288C46.33 288 32 273.7 32 256C32 238.3 46.33 224 64 224zM64 128C46.33 128 32 113.7 32 96C32 78.33 46.33 64 64 64C81.67 64 96 78.33 96 96C96 113.7 81.67 128 64 128z"/></svg>');
+    border: none;
+    width: 4px;
+    height: auto;
+    margin-left: 0.4rem;
+    vertical-align: middle;
+    filter: invert(21%) sepia(95%) saturate(0%) hue-rotate(227deg) brightness(103%) contrast(88%);
+    font-size: 1px
+}
+
+.ddl-items .dropdown-item:active {
+    background-color: #e9ecef;
+}
+
+.isDisabled {
+    color: dimgray;
+    cursor: not-allowed;
+    opacity: 0.5;
+    text-decoration: none;
+}
+
+.div-keywords .v-text-field--outlined fieldset, .div-anchor-text .v-text-field--outlined fieldset {
+    color: #ced4da !important;
+}
+
+.div-keywords .mdi-menu-down::before, .div-anchor-text .mdi-menu-down::before {
+    font-weight: 100;
+    content: "\f107";
+    font-family: "Font Awesome 6 Pro";
+    color: rgba(60,60,60,.5);
+    font-size: 22px;
+    margin-top: 8px;
+}
+
+/*Vuetify combobox*/
+
+.div-keywords .v-select.v-select--is-menu-active .v-input__icon--append .v-icon, .div-anchor-text .v-select.v-select--is-menu-active .v-input__icon--append .v-icon {
+    transform: rotate(180deg);
+    margin-top: 18px;
+}
+
+.div-keywords .v-text-field__details, .div-anchor-text .v-text-field__details {
+    display: none;
+}
+
+#content-section .primary--text {
+    color: #ff7a59 !important;
+}
+
+#content-section kbd {
+    background: #ff7a59;
+    color: #fff;
+}
+
+.v-text-field--filled > .v-input__control > .v-input__slot, .v-text-field--full-width > .v-input__control > .v-input__slot, .v-text-field--outlined > .v-input__control > .v-input__slot {
+    min-height: 38px;
+}
+
+
+.v-text-field--enclosed .v-input__append-inner, .v-text-field--enclosed .v-input__append-outer, .v-text-field--enclosed .v-input__prepend-inner, .v-text-field--enclosed .v-input__prepend-outer, .v-text-field--full-width .v-input__append-inner, .v-text-field--full-width .v-input__append-outer, .v-text-field--full-width .v-input__prepend-inner, .v-text-field--full-width .v-input__prepend-outer {
+    margin-top: 0px;
+}
+
+.v-select.v-text-field--outlined:not(.v-text-field--single-line) .v-select__selections {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.v-text-field.v-text-field--enclosed .v-text-field__details, .v-text-field.v-text-field--enclosed:not(.v-text-field--rounded) > .v-input__control > .v-input__slot {
+    margin-bottom: 0px;
+}
+
+.v-autocomplete__content.v-menu__content {
+    margin-top: 13px;
+}
+
+.v-list-item__action {
+    margin-right: 12px;
+}
+
+.div-campaigns .vs__selected-options {
+    flex-wrap: inherit !important;
+}
+.ddl-campaign .vs__dropdown-toggle, .ddl-content-type .vs__dropdown-toggle, .ddl-type-plan .vs__dropdown-toggle, .ddl-recurren-plan .vs__dropdown-toggle, .ddl-service .vs__dropdown-toggle {
+    min-height: 43px;
+}
+
+.fields-order input[type=text], .fields-order input[type=number], .fields-order .btn, .fields-order .customInputNumber {
+    min-height: 43px !important;
+}
+
+.fields-order .btn164 {
+    padding-top: 9px !important;
+}
+
+.daterangepicker  table thead tr th{
+    font-size: 13px;
+    font-weight:600;
+}
+
+.daterangepicker table tbody tr td {
+    font-size: 13px;
+    font-weight: normal;
+}
+
+
+.rectagle-container {
+    width: 100%;
+    flex-grow: 0;
+    padding: 22px 20px;
+    border-radius: 4px;
+    box-shadow: 0 1px 8px 0 rgb(191 203 255 / 45%);
+    background-color: #fff;
+}
+
+.addToCart-container {
+    width: 100%;
+    flex-grow: 0;
+    padding: 32px 40px;
+    border-radius: 4px;
+    box-shadow: 0 1px 8px 0 rgb(191 203 255 / 45%);
+    background-color: #fff;
+}
+
+.card-info-container {
+    width: 100%;
+    padding: 31px 40px 39px 39px;
+    box-shadow: 0 1px 8px 0 rgb(191 203 255 / 45%);
+    border-radius: .2rem;
+    background-color: #fff;
+}
+
+.card-info-title-container {
+    height: 40px;
+    width: 100%;
+}
+
+    .customInputNumberSmall {
+        width: 42px;
+    }
