@@ -4,14 +4,20 @@ body {
 
 .main-container {
   background-color: white;
-  max-width: 1440px;
   margin: auto;
 }
 
 .container {
-  max-width: 1440px;
   padding: 0 32px;
   margin: 0;
+}
+
+#top-section .container {
+  max-width: none;
+}
+
+#content-section .container {
+  max-width: 1440px;
 }
 
 #top-section #header_logo {
