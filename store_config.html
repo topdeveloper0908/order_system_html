@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <style data-styles="">
+    ion-icon {
+      visibility: hidden
+    }
+
+    .hydrated {
+      visibility: inherit
+    }
+  </style>
+  <title>
+    Admin - Ordering System
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+
+  
+  <link rel="icon" type="image/png" href="https://admin.steadycontent.com/images/app/favicon.png">
+  <script src="https://kit.fontawesome.com/2639e2dcaf.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" type="text/css" href="./assets/css/master.css">
+  <link href="./assets/css/orderingsystem.css" rel="stylesheet">
+  <link href="./assets/css/store_config.css" rel="stylesheet">
+  
+</head>
+
+<body cz-shortcut-listen="true">
+  <form method="post" action="#" id="form1">
+    <div class="aspNetHidden">
+      <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE"
+        value="hrB2crDAKzOINd/FC9r6B5BT7HtjrsrLJ7kaW7bDZEND0SLYEUhYalCsTQYT/Q+MHRGPZnYAGjKeagCq539R9YyG4YuIceXqKXqxNvwJyTUh/qapSWJlmFj/8oxU8MrAMmQgfKNEodkyGVTLlvKAWK5zMEvKZzyC0f7yehJA952QAZKTxXKHRp+MdtDpFtfLLEHVBaf3sNQ7Sd5WwJ4jGg==">
+    </div>
+    <div class="aspNetHidden">
+      <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="6462BC81">
+    </div>
+    <div>
+      <div class="main-container">
+        <div class="main-header">
+
+          <div id="top-section">
+            <div class="navbar navbar-expand-xl navbar-dark bg-dark">
+              <div class="container g-0">
+                <div class="header w-100 d-flex flex-xl-row flex-column">
+                  <a href="#" class="navbar-brand" id="lnkHome">
+                    <img src="./assets/AgencyHUB_logo.svg" id="header_logo" alt="Logo">
+                  </a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="navbar-collapse collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                      <li id="AppHeaderMaster_lkbtnDashboard" class="nav-item first-nav-item"><a class="nav-link active"
+                          aria-current="page" href="#">All Content</a>
+                      </li>
+                      <li id="AppHeaderMaster_lkbtnContentTask" class="nav-item">
+                        <a class="nav-link" aria-current="page"
+                          href="#">Titles</a></li>
+                      <li id="AppHeaderMaster_lkbtnSeoTask" class="nav-item">
+                        <a class="nav-link" aria-current="page"
+                          href="#">Campaigns</a></li>
+                      <li id="AppHeaderMaster_lkbtnSeoTask" class="nav-item">
+                        <a class="nav-link" aria-current="page"
+                          href="#">Link Building</a></li>
+                      <li id="AppHeaderMaster_lkbtnSeoTask" class="nav-item">
+                        <a class="nav-link" aria-current="page"
+                          href="#">Services</a></li>
+                      <li id="AppHeaderMaster_lkbtnSeoTask" class="nav-item">
+                        <a class="nav-link client-btn" aria-current="page"
+                          href="#">My Clients</a></li>
+                      </ul>
+                      <div class="button-group">
+                        <button type="button" class="btn btn-primary w-100">New Order</button>
+                        <button type="button" class="msg-btn btn btn-outline-light w-100">
+                          <img src="./assets/img/msg.png" alt="Icon">
+                          <span>Messages</span></button>
+                      </div>
+                      <div class="header-right d-flex align-items-center ms">
+                        <a href="" class="balance text-white">Balance: $0.00</a>
+                        <a class="alarm-icon position-relative" href="">
+                          <img src="./assets/img/alarm.png" alt="Icon">
+                          <span class="cart-count position-absolute text-white rounded-circle">1</span>
+                        </a>
+                        <a class="cart-icon" href="">
+                          <img src="./assets/img/cart.png" alt="Icon">
+                        </a>
+                        <a class="account-icon" href="">
+                          <img src="./assets/img/account.png" alt="Icon">
+                        </a>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div id="content-section">
+          <div class="container">
+            <h2 class="page-title ms-lg-5 ps-lg-4 text-lg-start text-center">Agency Store Configuration Store</h2>
+            <div class="row">
+              <div class="col-xl-1"></div>
+              <div class="col-xl-6 col-md-7 config-wrapper">
+                <form>
+                  <div class="row align-items-center form-group">
+                    <label for="inputPassword" class="col-5 col-form-label text-end fw-500">Brand / Store Name</label>
+                    <div class="col-7">
+                      <input type="text" class="form-control form-control-sm" id="inputPassword">
+                    </div>
+                  </div>
+                  <div class="row align-items-center form-group">
+                    <label for="inputPassword" class="col-5 col-form-label text-end fw-500">Primary Website / Domain</label>
+                    <div class="col-7">
+                      <input type="text" class="form-control form-control-sm" id="inputPassword" placeholder="ex.agencyname.com">
+                    </div>
+                  </div>
+                  <div class="row align-items-center form-group">
+                    <label for="inputPassword" class="col-5 col-form-label text-end fw-500">Subdomain</label>
+                    <div class="col-7">
+                      <input type="text" class="form-control form-control-sm" id="inputPassword">
+                    </div>
+                  </div>
+                  <div class="row align-items-center form-group">
+                    <label for="inputPassword" class="col-5 col-form-label text-end fw-500">Primary / Button Color</label>
+                    <div class="col-7">
+                      <input type="color" onchange="changeButtonColor(value)" class="form-control form-control-color" id="exampleColorInput" value="#a1cd3a" title="Choose your color">
+                    </div>
+                  </div>
+                  <div class="row align-items-center form-group">
+                    <label for="inputPassword" class="col-5 col-form-label text-end fw-500">Link / Accent Color</label>
+                    <div class="col-7">
+                      <input type="color" class="form-control form-control-color" id="exampleColorInput" value="#7f9bbd" title="Choose your color">
+                    </div>
+                  </div>
+                  <div class="row align-items-center form-group">
+                    <label for="inputPassword" class="col-5 col-form-label text-end fw-500">Logo (Upload)</label>
+                    <div class="col-7 d-flex align-items-center">
+                      <input class="form-control me-2" type="file" id="formFile">
+                      <div class="tooltip">
+                        <img src="./assets/img/info.png">
+                        <span class="tooltiptext">Transparent background 90px x 380px exact 100 x 400 max resolution</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row align-items-center form-group">
+                    <label for="inputPassword" class="col-5 col-form-label text-end fw-500">Logo Display</label>
+                    <div class="col-7">
+                      <ul id="logo-selector" class="pagination mb-0">
+                        <li class="page-item active"><a class="page-link" href="#"><i class="fa fa-check me-1"></i>Logo</a></li>
+                        <li class="page-item"><a class="page-link" href="#"><i class="fa fa-check me-1"></i>Text</a></li>
+                        <li class="page-item"><a class="page-link" href="#"><i class="fa fa-check me-1"></i>Blank</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="row align-items-center form-group">
+                    <label for="inputPassword" class="col-5 col-form-label text-end fw-500">Percentage Markup</label>
+                    <div class="col-7">
+                      <input type="text" class="form-control form-control-sm small text-center" id="inputPassword" placeholder="40%">
+                    </div>
+                  </div>
+                  <div class="row align-items-center form-group">
+                    <label for="inputPassword" class="col-5 col-form-label text-end fw-500">Timezone</label>
+                    <div class="col-7">
+                      <input type="text" class="form-control form-control-sm small text-center" id="inputPassword" placeholder="EST">
+                    </div>
+                  </div>
+                  <div class="row align-items-center form-group">
+                    <label for="inputPassword" class="col-5 col-form-label text-end fw-500">Email to deliver services</label>
+                    <div class="col-7">
+                      <input type="email" class="form-control form-control-sm" id="inputPassword">
+                    </div>
+                  </div>
+                  <div class="row align-items-center form-group">
+                    <label for="inputPassword" class="col-5 col-form-label text-end fw-500">Connect Stripe</label>
+                    <div class="col-7 d-flex align-items-center">
+                      <div class="stripe-wrapper d-flex align-items-center justify-content-center me-2">
+                        <label>Connect to</label>
+                        <img src="./assets/img/stripe.png">                 
+                      </div>
+                      <div class="tooltip">
+                        <img src="./assets/img/info.png">
+                        <span class="tooltiptext">Connect Stripe to earn commissions on every sale.</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row align-items-center form-group">
+                    <label for="inputPassword" class="col-sm-4"></label>
+                    <div class="col-7">
+                      <button type="submit" class="btn btn-save fw-500">Save Changes</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="col-xl-4 col-md-5">
+                <div class="order-wrapper mb-4">
+                  <div class="order-header d-flex align-items-center justify-content-between">
+                    <img src="./assets/img/email-on-acid 1.png">
+                    <button class="btn mb-0 btn-custom">New Order</button>                 
+                  </div>
+                  <div class="col-12 p-0">
+                    <div class="progressbar-text d-flex justify-content-between">
+                      <div class="w-100 d-flex justify-content-evenly">
+                        <div class="progressbar-text-container active text-center">Order Type</div>
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                      <div id="progressbar-full-width">
+                        <div class="item active"></div>
+                        <div class="item_bar"></div>
+                        <div class="item passed"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 p-0">
+                    <div class="row">
+                      <div class="card-info-container">
+                        <div>
+                          <div id="progresstitles">
+                            <!---->
+                            <!---->
+                            <div class="d-flex flex-row align-items-center">
+                              <div class="number">2</div>
+                              <!---->
+                              <h2 class="pt-0 mb-0"><a class="colorLightPurple remove-underline">Order Type</a>
+                              </h2>
+                            </div>
+                            <!---->
+                            <!---->
+                          </div>
+                          <div class="col-12  p-0">
+                            <hr class="my-2 mb-4">
+                          </div>
+                        </div>
+                        <img
+                          src="./assets/img/google.png" alt="Asp Net Core Application"
+                          class="img-fluid rectagle-container p-0">
+                        <h2 class="fs-26px colorLightPurple fw-bold mt-4">Google MapBoost</h2> 
+                        <span class="d-block mt-3 mb-5">
+                          <p>
+                            Can help improve your business's visibility on Google Maps.
+                          </p>
+                        </span>
+                        <div class="d-flex align-items-center justify-content-between">
+                          <h4>From <span> $419</span></h4>
+                          <a href="" class="btn-custom-link text-decoration-none">Learn More</a>
+                        </div>
+                        <button class="btn mb-0 d-block w-100 mt-4 btn-custom">Configure & Order</button>                 
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>          
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </form>
+  
+</body>
+
+<script>
+  function changeButtonColor(value) {
+    console.log(value);
+  }
+</script>
+</html>
