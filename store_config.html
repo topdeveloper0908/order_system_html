@@ -131,13 +131,13 @@
                   <div class="row align-items-center form-group">
                     <label for="inputPassword" class="col-5 col-form-label text-end fw-500">Primary / Button Color</label>
                     <div class="col-7">
-                      <input type="color" onchange="changeButtonColor(value)" class="form-control form-control-color button-color" id="exampleColorInput" value="#a1cd3a" title="Choose your color">
+                      <input type="color" onchange="changePirmaryColor(value)" class="form-control form-control-color button-color" id="exampleColorInput" value="#a1cd3a" title="Choose your color">
                     </div>
                   </div>
                   <div class="row align-items-center form-group">
                     <label for="inputPassword" class="col-5 col-form-label text-end fw-500">Link / Accent Color</label>
                     <div class="col-7">
-                      <input type="color" class="form-control form-control-color link-color" id="exampleColorInput" value="#7f9bbd" title="Choose your color">
+                      <input type="color" onchange="changeSecondaryColor(value)" class="form-control form-control-color link-color" id="exampleColorInput" value="#7f9bbd" title="Choose your color">
                     </div>
                   </div>
                   <div class="row align-items-center form-group">
@@ -202,7 +202,7 @@
                   <div class="order-wrapper mb-4">
                     <div class="order-header d-flex align-items-center justify-content-between">
                       <img src="./assets/img/email-on-acid 1.png">
-                      <button class="btn mb-0 btn-primary">New Order</button>                 
+                      <button class="btn mb-0 btn-primary primary-bg">New Order</button>                 
                     </div>
                     <div class="col-12 p-0">
                       <div class="progressbar-text d-flex justify-content-between">
@@ -249,9 +249,9 @@
                           </span>
                           <div class="d-flex align-items-center justify-content-between">
                             <h4>From <span> $419</span></h4>
-                            <a href="" class="btn-primary-link text-decoration-none">Learn More</a>
+                            <a href="" class="btn-secondary-link text-decoration-none secondary-bg">Learn More</a>
                           </div>
-                          <button class="btn mb-0 d-block w-100 mt-4 btn-primary">Configure & Order</button>                 
+                          <button class="btn mb-0 d-block w-100 mt-4 btn-primary primary-bg">Configure & Order</button>                 
                         </div>
                       </div>
                     </div>
@@ -273,17 +273,15 @@
 </body>
 
 <script>
-  function changeButtonColor(value) {
-    var elements = document.querySelectorAll('.btn-primary');
-    elements.forEach(element => {
-      element.style.backgroundColor = value;
-      element.style.borderColor = value;
-    });
+  function changePirmaryColor(value) {
     var elements = document.querySelectorAll('.primary-bg');
     elements.forEach(element => {
       element.style.backgroundColor = value;
       element.style.borderColor = value;
     });
+  }
+  function changeSecondaryColor(value) {
+    document.documentElement.style.setProperty('--secondary-color', value)
   }
 
   function logoChange(value) {
