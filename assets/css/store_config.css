@@ -233,12 +233,15 @@
   padding-top: 12px;
   padding-bottom: 12px;
   color: white;
-  background-color: #a1cd3a;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 .order-wrapper .btn:hover {
   opacity: 0.9;
+}
+.order-wrapper .btn-primary {
+  background-color: #a1cd3a;
+  border-color: #a1cd3a;
 }
 
 .progressbar-text-container {
@@ -378,4 +381,23 @@
   background-color: #6d7278;
   border-color: #6d7278;
   color: white;
+}
+
+#top-section .navbar-brand {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+#top-section .navbar-brand img {
+  max-width: 164px;
+  max-height: 36px;
+}
+
+#formFile {
+  height: unset;
 }

@@ -211,11 +211,14 @@
         padding-top: 12px;
         padding-bottom: 12px;
         color: white;
-        background-color: #a1cd3a;
         box-shadow: none;
         &:hover {
             opacity: 0.9;
         }
+    }
+    .btn-primary {
+        background-color: #a1cd3a;
+        border-color: #a1cd3a;
     }
 }
 .progressbar-text-container {
@@ -342,4 +345,17 @@
             color: white;
         }
     }
+}
+#top-section .navbar-brand {
+    display: flex;
+    align-items: center;
+    font-size: 1.6rem;
+    font-weight: 700;
+    img {
+        max-width: 164px;
+        max-height: 36px;
+    }
+}
+#formFile {
+    height: unset;
 }

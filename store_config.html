@@ -113,7 +113,7 @@
                   <div class="row align-items-center form-group">
                     <label for="inputPassword" class="col-5 col-form-label text-end fw-500">Brand / Store Name</label>
                     <div class="col-7">
-                      <input type="text" class="form-control form-control-sm" placeholder="ex: Agency Cove" id="inputPassword">
+                      <input type="text" class="form-control form-control-sm" placeholder="ex: Agency Cove" id="brandName">
                     </div>
                   </div>
                   <div class="row align-items-center form-group">
@@ -143,13 +143,14 @@
                   <div class="row align-items-center form-group">
                     <label for="inputPassword" class="col-5 col-form-label text-end fw-500">Logo (Upload)</label>
                     <div class="col-7 d-flex align-items-center">
-                      <div class="file-upload me-2">
+                      <input class="form-control me-2" type="file" id="formFile" onchange="uploadImage()">
+                      <!-- <div class="file-upload me-2">
                         <div class="file-upload-select">
                           <div class="file-select-button" >Select File</div>
                           <div class="file-select-name flex-grow-1"></div> 
-                          <input type="file" name="file-upload-input" id="file-upload-input">
+                          <input type="file" name="file-upload-input" id="file-upload" onchange="uploadImage()">
                         </div>
-                      </div>
+                      </div> -->
                       <div class="tooltip">
                         <img src="./assets/img/info.png">
                         <span class="tooltiptext">Transparent background 90px x 380px exact 100 x 400 max resolution</span>
@@ -160,9 +161,9 @@
                     <label for="inputPassword" class="col-5 col-form-label text-end fw-500">Logo Display</label>
                     <div class="col-7">
                       <ul id="logo-selector" class="pagination mb-0">
-                        <li class="page-item active"><a class="page-link" href="#">Logo</a></li>
-                        <li class="page-item"><a class="page-link" href="#">Text</a></li>
-                        <li class="page-item"><a class="page-link" href="#">Blank</a></li>
+                        <li id="logo-btn" class="page-item active"><a class="page-link" onclick="logoChange(0)" href="#">Logo</a></li>
+                        <li id="text-logo-btn" class="page-item"><a class="page-link" onclick="logoChange(1)" href="#">Text</a></li>
+                        <li id="blank-logo-btn" class="page-item"><a class="page-link" onclick="logoChange(2)" href="#">Blank</a></li>
                       </ul>
                     </div>
                   </div>
@@ -201,7 +202,7 @@
                   <div class="order-wrapper mb-4">
                     <div class="order-header d-flex align-items-center justify-content-between">
                       <img src="./assets/img/email-on-acid 1.png">
-                      <button class="btn mb-0 btn-custom">New Order</button>                 
+                      <button class="btn mb-0 btn-primary">New Order</button>                 
                     </div>
                     <div class="col-12 p-0">
                       <div class="progressbar-text d-flex justify-content-between">
@@ -225,7 +226,7 @@
                               <!---->
                               <!---->
                               <div class="d-flex flex-row align-items-center">
-                                <div class="number">2</div>
+                                <div class="number primary-bg">2</div>
                                 <!---->
                                 <h2 class="pt-0 mb-0"><a class="colorLightPurple remove-underline">Order Type</a>
                                 </h2>
@@ -248,9 +249,9 @@
                           </span>
                           <div class="d-flex align-items-center justify-content-between">
                             <h4>From <span> $419</span></h4>
-                            <a href="" class="btn-custom-link text-decoration-none">Learn More</a>
+                            <a href="" class="btn-primary-link text-decoration-none">Learn More</a>
                           </div>
-                          <button class="btn mb-0 d-block w-100 mt-4 btn-custom">Configure & Order</button>                 
+                          <button class="btn mb-0 d-block w-100 mt-4 btn-primary">Configure & Order</button>                 
                         </div>
                       </div>
                     </div>
@@ -273,7 +274,79 @@
 
 <script>
   function changeButtonColor(value) {
-    console.log(value);
+    var elements = document.querySelectorAll('.btn-primary');
+    elements.forEach(element => {
+      element.style.backgroundColor = value;
+      element.style.borderColor = value;
+    });
+    var elements = document.querySelectorAll('.primary-bg');
+    elements.forEach(element => {
+      element.style.backgroundColor = value;
+      element.style.borderColor = value;
+    });
+  }
+
+  function logoChange(value) {
+    if(value == 2) {
+      document.getElementById("lnkHome").classList.add("d-none");                
+      document.getElementById("logo-btn").classList.remove("active");                
+      document.getElementById("text-logo-btn").classList.remove("active");            
+      if(!document.getElementById("blank-logo-btn").classList.contains("active")) {
+        document.getElementById("blank-logo-btn").classList.add("active");                 
+      }
+      document.getElementById("formFile").setAttribute("disabled", true);                 
+    }
+    else if(value == 1) { // Text
+      document.getElementById("logo-btn").classList.remove("active");     
+      if(!document.getElementById("text-logo-btn").classList.contains("active")) {
+        document.getElementById("text-logo-btn").classList.add("active");            
+      }
+      if(document.getElementById("lnkHome").classList.contains("d-none")) {
+        document.getElementById("lnkHome").classList.remove("d-none");            
+      }
+      document.getElementById("lnkHome").innerHTML = "<span class='logo-txt'>"+document.getElementById("brandName").value+"</span>";            
+      document.getElementById("blank-logo-btn").classList.remove("active");                 
+      document.getElementById("formFile").setAttribute("disabled", true);                 
+    }
+    else { // Img
+      document.getElementById("logo-btn").classList.remove("active");                
+      document.getElementById("text-logo-btn").classList.remove("active");            
+      document.getElementById("formFile").removeAttribute("disabled");                 
+      if(document.getElementById("lnkHome").classList.contains("d-none")) {
+        document.getElementById("lnkHome").classList.remove("d-none");            
+      }
+      if(!document.getElementById("logo-btn").classList.contains("active")) {
+        document.getElementById("logo-btn").classList.add("active");                 
+      }
+      if(localStorage.getItem('image')) {
+        const savedImage = localStorage.getItem('image');
+        const img = new Image();
+        img.src = savedImage;
+        document.getElementById("lnkHome").innerHTML = "";
+        document.getElementById("lnkHome").appendChild(img);
+      }
+      else {
+        document.getElementById("lnkHome").innerHTML = "<img src='./assets/AgencyHUB_logo.svg' id='header_logo' alt='Logo'>";
+      }
+    }
+  }
+  function uploadImage() {
+    const input = document.getElementById("formFile");
+    const file = input.files[0];
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => {
+      const img = new Image();
+      img.src = reader.result;
+      img.onload = () => {
+        localStorage.setItem('image', img.src);
+      };
+    };
+    const savedImage = localStorage.getItem('image');
+    const img = new Image();
+    img.src = savedImage;
+    document.getElementById("lnkHome").innerHTML = "";
+    document.getElementById("lnkHome").appendChild(img);
   }
 </script>
 </html>
