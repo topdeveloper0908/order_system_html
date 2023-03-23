@@ -201,7 +201,9 @@
                 <div class="order-container mx-auto">
                   <div class="order-wrapper mb-4">
                     <div class="order-header d-flex align-items-center justify-content-between">
-                      <img src="./assets/img/email-on-acid 1.png">
+                      <div id="custom-logo">
+                        <img src="./assets/img/email-on-acid 1.png">
+                      </div>
                       <button class="btn mb-0 btn-primary primary-bg">New Order</button>                 
                     </div>
                     <div class="col-12 p-0">
@@ -275,7 +277,7 @@
 <script>
   function changeBrandName(value) {
     console.log(value);
-    document.getElementById("lnkHome").innerHTML = "<span class='logo-txt'>"+value+"</span>";            
+    document.getElementById("custom-logo").innerHTML = "<span class='logo-txt text-white'>"+value+"</span>";            
   }
   function changePirmaryColor(value) {
     var elements = document.querySelectorAll('.primary-bg');
@@ -290,7 +292,7 @@
 
   function logoChange(value) {
     if(value == 2) {
-      document.getElementById("lnkHome").classList.add("d-none");                
+      document.getElementById("custom-logo").classList.add("d-none");                
       document.getElementById("logo-btn").classList.remove("active");                
       document.getElementById("text-logo-btn").classList.remove("active");            
       if(!document.getElementById("blank-logo-btn").classList.contains("active")) {
@@ -305,20 +307,20 @@
       if(!document.getElementById("text-logo-btn").classList.contains("active")) {
         document.getElementById("text-logo-btn").classList.add("active");            
       }
-      if(document.getElementById("lnkHome").classList.contains("d-none")) {
-        document.getElementById("lnkHome").classList.remove("d-none");            
+      if(document.getElementById("custom-logo").classList.contains("d-none")) {
+        document.getElementById("custom-logo").classList.remove("d-none");            
       }
-      document.getElementById("lnkHome").innerHTML = "<span class='logo-txt'>"+document.getElementById("brandName").value+"</span>";            
+      document.getElementById("custom-logo").innerHTML = "<span class='logo-txt text-white'>"+document.getElementById("brandName").value+"</span>";            
       document.getElementById("blank-logo-btn").classList.remove("active");                 
       document.getElementById("formFile").setAttribute("disabled", true);                 
     }
     else { // Img
-      document.getElementById("logo-btn").classList.remove("active");                
+      document.getElementById("blank-logo-btn").classList.remove("active");                
       document.getElementById("text-logo-btn").classList.remove("active");            
       document.getElementById("formFile").removeAttribute("disabled");                 
       document.getElementById("brandName").setAttribute("disabled", true);                 
-      if(document.getElementById("lnkHome").classList.contains("d-none")) {
-        document.getElementById("lnkHome").classList.remove("d-none");            
+      if(document.getElementById("custom-logo").classList.contains("d-none")) {
+        document.getElementById("custom-logo").classList.remove("d-none");            
       }
       if(!document.getElementById("logo-btn").classList.contains("active")) {
         document.getElementById("logo-btn").classList.add("active");                 
@@ -327,11 +329,11 @@
         const savedImage = localStorage.getItem('image');
         const img = new Image();
         img.src = savedImage;
-        document.getElementById("lnkHome").innerHTML = "";
-        document.getElementById("lnkHome").appendChild(img);
+        document.getElementById("custom-logo").innerHTML = "";
+        document.getElementById("custom-logo").appendChild(img);
       }
       else {
-        document.getElementById("lnkHome").innerHTML = "<img src='./assets/AgencyHUB_logo.svg' id='header_logo' alt='Logo'>";
+        document.getElementById("custom-logo").innerHTML = "<img src=''./assets/img/email-on-acid 1.png'>";
       }
     }
   }
@@ -350,8 +352,8 @@
     const savedImage = localStorage.getItem('image');
     const img = new Image();
     img.src = savedImage;
-    document.getElementById("lnkHome").innerHTML = "";
-    document.getElementById("lnkHome").appendChild(img);
+    document.getElementById("custom-logo").innerHTML = "";
+    document.getElementById("custom-logo").appendChild(img);
   }
 </script>
 </html>
