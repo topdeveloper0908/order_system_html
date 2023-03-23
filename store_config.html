@@ -113,7 +113,7 @@
                   <div class="row align-items-center form-group">
                     <label for="inputPassword" class="col-5 col-form-label text-end fw-500">Brand / Store Name</label>
                     <div class="col-7">
-                      <input type="text" class="form-control form-control-sm" placeholder="ex: Agency Cove" id="brandName">
+                      <input type="text" class="form-control form-control-sm" placeholder="ex: Agency Cove" onchange="changeBrandName(value)" id="brandName" disabled>
                     </div>
                   </div>
                   <div class="row align-items-center form-group">
@@ -273,6 +273,10 @@
 </body>
 
 <script>
+  function changeBrandName(value) {
+    console.log(value);
+    document.getElementById("lnkHome").innerHTML = "<span class='logo-txt'>"+value+"</span>";            
+  }
   function changePirmaryColor(value) {
     var elements = document.querySelectorAll('.primary-bg');
     elements.forEach(element => {
@@ -293,8 +297,10 @@
         document.getElementById("blank-logo-btn").classList.add("active");                 
       }
       document.getElementById("formFile").setAttribute("disabled", true);                 
+      document.getElementById("brandName").setAttribute("disabled", true);                 
     }
     else if(value == 1) { // Text
+      document.getElementById("brandName").removeAttribute("disabled");                 
       document.getElementById("logo-btn").classList.remove("active");     
       if(!document.getElementById("text-logo-btn").classList.contains("active")) {
         document.getElementById("text-logo-btn").classList.add("active");            
@@ -310,6 +316,7 @@
       document.getElementById("logo-btn").classList.remove("active");                
       document.getElementById("text-logo-btn").classList.remove("active");            
       document.getElementById("formFile").removeAttribute("disabled");                 
+      document.getElementById("brandName").setAttribute("disabled", true);                 
       if(document.getElementById("lnkHome").classList.contains("d-none")) {
         document.getElementById("lnkHome").classList.remove("d-none");            
       }
